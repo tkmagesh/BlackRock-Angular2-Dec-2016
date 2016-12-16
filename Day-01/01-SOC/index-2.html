@@ -23,7 +23,13 @@
 
 		//Model
 		function SalaryCalculator(){
-			this.basic = 0;
+			var _basic = 0;
+			this.setBasic(basic){
+				_basic = basic; 
+			}		   
+			this.getBasic(){
+				return _basic;
+			}
 			this.hra = 0;
 			this.da = 0;
 			this.tax = 0;
@@ -44,7 +50,7 @@
 			window.calculator = new SalaryCalculator();
 
 			$("#txtBasic").change(function(){
-				calculator.basic = $("#txtBasic").val().toInt();
+				calculator.setBasic($("#txtBasic").val().toInt());
 			});
 
 			$("#txtHra").change(function(){
