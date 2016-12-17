@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `<h1>Angular 2 App</h1>
             <div>
-              <salary-calculator></salary-calculator>
+              <math-calculator-one></math-calculator-one>
+              <hr/>
+              <math-calculator-two></math-calculator-two>
             </div>
             `,
 })
