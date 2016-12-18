@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Bug} from '../Bug';
-import {BugOperations} from '../BugOperations';
+import {BugStorage} from '../services/BugStorage';
 
 @Component({
     template : ` 
@@ -14,11 +14,11 @@ export class BugComponent{
     @Input()
     data:Bug = null;
 
-    constructor(private _bugOperations : BugOperations){
+    constructor(private _bugStorage : BugStorage){
 
     }
     
     toggle(bug:Bug){
-        this._bugOperations.toggle(bug)
+        this._bugStorage.toggle(bug)
     }
 }

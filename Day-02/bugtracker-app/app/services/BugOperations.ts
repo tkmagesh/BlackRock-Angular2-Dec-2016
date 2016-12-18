@@ -1,12 +1,12 @@
-import {Bug} from "./Bug";
+import {Bug} from "../Bug";
 import {Injectable} from '@angular/core';
 
 @Injectable()
 export class BugOperations{
-    currentBugId : number = 0;
-    createNew(bugName:string) : Bug{
+    
+    createNew(id : number, bugName:string) : Bug{
         var newBug = {
-            id : ++this.currentBugId,
+            id : id,
             name : bugName,
             isClosed : false,
             createdAt : new Date()
@@ -15,7 +15,6 @@ export class BugOperations{
     }
 
     toggle(bug : Bug) : void{
-        console.log(this.currentBugId);
         bug.isClosed = !bug.isClosed
     }
 }
