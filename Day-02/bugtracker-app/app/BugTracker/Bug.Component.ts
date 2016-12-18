@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Bug} from '../Bug';
+import {BugOperations} from '../BugOperations';
 
 @Component({
     template : ` 
@@ -13,7 +14,11 @@ export class BugComponent{
     @Input()
     data:Bug = null;
 
-     toggle(bug:Bug){
-        bug.isClosed = !bug.isClosed;
+    constructor(private _bugOperations : BugOperations){
+
+    }
+    
+    toggle(bug:Bug){
+        this._bugOperations.toggle(bug)
     }
 }

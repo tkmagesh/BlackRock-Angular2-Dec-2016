@@ -1,19 +1,23 @@
 import {Component} from '@angular/core'
 import {Bug} from './Bug';
+import {BugOperations} from './BugOperations';
+
 @Component({
     templateUrl : 'app/bugTracker.template.html',
     selector : 'bug-tracker'
 })
 export class BugTracker{
     bugs : Array<Bug> = [];
-    newBugName : string = '';
+   
 
-    addNew(){
-        var newBug = {
-            name : this.newBugName,
-            isClosed : false,
-            createdAt : new Date()
-        };
+    //bugOperations : BugOperations = new BugOperations();
+
+    constructor(private _bugOperations : BugOperations){
+
+    }
+
+    addNew(newBugName:string){
+        var newBug = this._bugOperations.createNew(newBugName)
         this.bugs = this.bugs.concat([newBug]);
     }
 

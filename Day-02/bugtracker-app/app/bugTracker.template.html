@@ -11,7 +11,7 @@
     <section class="edit">
         <label for="">Bug :</label>
         <input type="text" [(ngModel)]="newBugName">
-        <input type="button" value="Add New" (click) = "addNew()">
+        <input type="button" value="Add New" (click) = "addNew(newBugName)">
     </section>
     <section class="list">
         <ol>
