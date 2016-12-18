@@ -16,10 +16,10 @@ export class SortPipe implements PipeTransform{
     }
 }
 
-interface  bugComparerType { (b1:Bug, b2:Bug) : number };
+//interface  bugComparerType { (b1:Bug, b2:Bug) : number };
 
 
-let getDescending = (bugComparer : bugComparerType) : bugComparerType => {
+function getDescending(bugComparer : (b1:Bug, b2:Bug) => number) : (b1:Bug, b2:Bug) => number {
     return function(bug1 : Bug, bug2 : Bug) : number{
         return -1 * bugComparer(bug1, bug2);
     }
