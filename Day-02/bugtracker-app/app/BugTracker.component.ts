@@ -14,7 +14,7 @@ export class BugTracker{
             isClosed : false,
             createdAt : new Date()
         };
-        this.bugs.push(newBug);
+        this.bugs = this.bugs.concat([newBug]);
     }
 
    

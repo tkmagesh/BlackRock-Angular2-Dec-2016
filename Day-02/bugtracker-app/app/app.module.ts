@@ -8,10 +8,11 @@ import {BugComponent} from './BugTracker/Bug.component';
 import {BugStats} from './BugTracker/BugStats.component';
 
 import {TrimTextPipe} from './pipes/trimtext.pipe'
+import {SortPipe} from './pipes/sort.pipe'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, BugTracker, BugComponent, BugStats, TrimTextPipe],
+  declarations: [ AppComponent, BugTracker, BugComponent, BugStats, TrimTextPipe, SortPipe],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
