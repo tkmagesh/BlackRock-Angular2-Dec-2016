@@ -1,11 +1,7 @@
 
 <hr>
 <section class="content">
-    <section class="stats">
-        <span class="closed">2</span>
-        <span> / </span>
-        <span>{{bugs.length}}</span>
-    </section>
+    <bug-stats [data]="bugs"></bug-stats>
     <section class="sort">
         <label for="">Order By :</label>
         <input type="text" name="" id="">
@@ -20,10 +16,9 @@
     <section class="list">
         <ol>
             <li *ngFor="let bug of bugs">
-                <span class="bugname">{{bug.name}}</span>
-                <div class="datetime">{{bug.createdAt}}</div>
+               <bug-item [data]="bug"></bug-item>
             </li>
         </ol>
-        <input type="button" value="Remove Closed">
+        <input type="button" value="Remove Closed" (click)="removeClosed()">
     </section>
 </section>

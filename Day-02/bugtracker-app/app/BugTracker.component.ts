@@ -16,4 +16,15 @@ export class BugTracker{
         };
         this.bugs.push(newBug);
     }
+
+   
+
+    removeClosed(){
+        for(let i=this.bugs.length-1; i >= 0; i--){
+            if (this.bugs[i].isClosed)
+                this.bugs.splice(i,1);
+        }
+    }
+
+   
 }
