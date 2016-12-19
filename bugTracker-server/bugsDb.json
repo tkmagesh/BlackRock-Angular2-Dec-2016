@@ -17,6 +17,42 @@
       "isClosed": false,
       "createdAt": "2016-09-09T06:38:33.530Z",
       "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Application is not responding",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:44:34.844Z"
+    },
+    {
+      "id": 9,
+      "name": "Arrow function are working",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:45:31.983Z"
+    },
+    {
+      "id": 10,
+      "name": "this context is confusing",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:46:40.122Z"
+    },
+    {
+      "id": 11,
+      "name": "What the hell is 'this' context?",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:47:36.028Z"
+    },
+    {
+      "id": 12,
+      "name": "Using self solves things",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:49:09.112Z"
+    },
+    {
+      "id": 13,
+      "name": "Using self solves things",
+      "isClosed": false,
+      "createdAt": "2016-12-19T09:52:27.248Z"
     }
   ],
   "employees": [

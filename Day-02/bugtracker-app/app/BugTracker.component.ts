@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {Bug} from './Bug';
 import {BugStorage} from './services/BugStorage';
+import {BugService} from './services/BugService';
 
 @Component({
     templateUrl : 'app/bugTracker.template.html',
@@ -14,17 +15,25 @@ export class BugTracker implements OnInit{
 
     //bugOperations : BugOperations = new BugOperations();
 
-    constructor(private _bugStorage : BugStorage){
+    constructor(private _bugStorage : BugStorage, private _bugService : BugService){
 
     }
 
     ngOnInit(){
-        this.bugs = this._bugStorage.getAll();
+        this._bugService
+            .getAll()
+            .subscribe(bugs => {
+                this.bugs = bugs;
+            })
     }
 
     addNew(newBugName:string){
-        var newBug = this._bugStorage.addNew(newBugName)
-        this.bugs = this.bugs.concat([newBug]);
+        var self = this;
+        this._bugService.addNew(newBugName).subscribe(function(bug) {
+            console.log(self);
+            self.bugs = self.bugs.concat([bug]);
+        })
+        
     }
 
    toggle(bug:Bug){
