@@ -9,6 +9,8 @@ import {BugStorage} from './services/BugStorage';
 export class BugTracker implements OnInit{
     bugs : Array<Bug> = [];
    
+    sortBugBy : string = 'name';
+    sortBugOrder : boolean = false;
 
     //bugOperations : BugOperations = new BugOperations();
 
@@ -27,6 +29,11 @@ export class BugTracker implements OnInit{
 
    toggle(bug:Bug){
        this._bugStorage.toggle(bug);
+   }
+
+   onBugSort(bugSortData : {by : string, descending : boolean}){
+       this.sortBugBy = bugSortData.by;
+       this.sortBugOrder = bugSortData.descending;
    }
 
     removeClosed(){
