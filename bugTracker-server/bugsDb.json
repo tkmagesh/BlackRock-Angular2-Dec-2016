@@ -14,14 +14,14 @@
     },
     {
       "name": "Blackrock apps are awesome",
-      "isClosed": false,
+      "isClosed": true,
       "createdAt": "2016-09-09T06:38:33.530Z",
       "id": 7
     },
     {
       "id": 8,
       "name": "Application is not responding",
-      "isClosed": false,
+      "isClosed": true,
       "createdAt": "2016-12-19T09:44:34.844Z"
     },
     {
