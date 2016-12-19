@@ -25,7 +25,9 @@ export class BugTracker implements OnInit{
         this.bugs = this.bugs.concat([newBug]);
     }
 
-   
+   toggle(bug:Bug){
+       this._bugStorage.toggle(bug);
+   }
 
     removeClosed(){
         for(let i=this.bugs.length-1; i >= 0; i--){

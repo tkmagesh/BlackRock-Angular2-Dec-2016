@@ -16,7 +16,7 @@
     <section class="list">
         <ol>
             <li *ngFor="let bug of (bugs|sort:sortBugBy:sortBugOrder)">
-               <bug-item [data]="bug"></bug-item>
+               <bug-item [data]="bug" (onToggle)="toggle($event)"></bug-item>
             </li>
         </ol>
         <input type="button" value="Remove Closed" (click)="removeClosed()">
